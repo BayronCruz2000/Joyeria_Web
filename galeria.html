@@ -1,0 +1,78 @@
+<html>
+
+<head>
+  <link href="Less/base.less" rel="stylesheet/less" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&amp;display=swap" rel="stylesheet" />
+  <title>Galería</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="/main.js" type="module"></script>
+</head>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
+
+<body>
+  {{> header}}
+  <div class="container">
+    <div class="carousel">
+      <img class="active" src="imgSource/banner3.jpg" />
+      <img src="imgSource/banner4.jpg" />
+      <img src="imgSource/banner5.jpg" />
+    </div>
+  </div>
+  <div class="container">
+    <h2>Explora </h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="imgSource/joyas.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="imgSource/joyas2.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="imgSource/joyas3.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="imgSource/joyas4.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="imgSource/joyas5.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="imgSource/joyas6.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="imgSource/joyas7.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="imgSource/joyas8.jpg" alt="">
+      </div>
+      <div class="card">
+        <img src="imgSource/joyas9.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  </div>
+  {{>footer}}
+  <script src="/main.js" type="module"></script>
+  </div>
+</body>
+
+</html>

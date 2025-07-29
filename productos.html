@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <link href="Less/base.less" rel="stylesheet/less" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&amp;display=swap" rel="stylesheet" />
+  <title>Productos</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="/main.js" type="module"></script>
+</head>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
+
+<body>
+  {{> header}}
+
+  <div class="container">
+    <h2>Nuestros Productos</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="imgSource/anillo1.jpg" alt="Producto 1" />
+        <h3>Anillo de Oro</h3>
+        <p>Diseño clásico en oro</p>
+      </div>
+
+      <div class="card">
+        <img src="imgSource/brazalete1.jpg" alt="Producto 2" />
+        <h3>Brazalete</h3>
+        <p>Elegancia y delicadeza artesanal</p>
+      </div>
+
+      <div class="card">
+        <img src="imgSource/collar.jpg" alt="Producto 3" />
+        <h3>Collar en oro</h3>
+        <p>Bello collar bañado en oro</p>
+      </div>
+      <div class="card">
+        <img src="imgSource/collar2.jpg" alt="Producto 4" />
+        <h3>Juego de Collar y Aretes</h3>
+        <p>Linda combinacion de collar con aretes</p>
+      </div>
+      <div class="card">
+        <img src="imgSource/collar3.jpg" alt="Producto 5" />
+        <h3>Collar con Piedra</h3>
+        <p>Piedra preciosa montada a mano</p>
+      </div>
+      <div class="card">
+        <img src="imgSource/anillo2.jpg" alt="Producto 6" />
+        <h3>Anillo con Piedra</h3>
+        <p>Anillo con piedra roja como rubi</p>
+      </div>
+    </div>
+  </div>
+        </div>
+    {{>footer}}
+    <script src="/main.js" type="module"></script>
+  </div>
+</body>
+</html>

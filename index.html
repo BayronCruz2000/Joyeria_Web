@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="Less/base.less" rel="stylesheet/less" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&amp;display=swap" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+
+</head>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
+
+<body>
+  <div class="container">
+    {{>header}}
+    <div class="home-main fade-in fade-in fade-in">
+      <h1>Joyería y Accesorios Jasminne</h1>
+      <img alt="Banner de la Tienda" src="imgSource/banner.jpg" />
+      <p>
+        En nuestra joyería,
+        creemos que cada pieza debe contar una historia.
+        Este sitio ha sido creado para acercarte a nuestra colección de joyas exclusivas,
+        mostrarte el arte detrás de cada diseño y ofrecerte una experiencia de compra
+        elegante, segura y personalizada. Aquí encontrarás belleza, calidad y significado en cada detalle.
+      </p>
+
+      <section class="home-card-container fade-in fade-in fade-in">
+        <div class="home-card fade-in fade-in fade-in">
+          <div class="home-card-image fade-in fade-in fade-in">
+            <img alt="Banner 2 de la Tienda" src="imgSource/banner2.jpg" />
+          </div>
+          <div class="home-card-title fade-in fade-in fade-in">
+            <h2>Variedad de anillos.</h2>
+          </div>
+          <div class="home-card-body fade-in fade-in fade-in">
+            <p>
+              Los estilos actuales de Verano
+            </p>
+          </div>
+        </div>
+        <div class="home-card fade-in fade-in fade-in">
+          <div class="home-card-image fade-in fade-in fade-in">
+            <img alt="Anillos" src="imgSource/anillos.jpg" style= "width: 200px; border: 2px solid black;" />
+          </div>
+          <div class="home-card-title fade-in fade-in fade-in">
+            <h2>Pendientes</h2>
+          </div>
+          <div class="home-card-body fade-in fade-in fade-in">
+            <p>
+              Estilos playeros para vacacionar.
+            </p>
+          </div>
+        </div>
+        <div class="home-card fade-in fade-in fade-in">
+          <div class="home-card-image fade-in fade-in fade-in">
+            <img alt="Pendientes" src="imgSource/pendientes.jpg" style= "width: 200px; border: 2px solid black;" />
+          </div>
+          <div class="home-card-title fade-in fade-in fade-in">
+            <h2>Brazaletes</h2>
+          </div>
+          <div class="home-card-body fade-in fade-in fade-in">
+            <p>
+              Estilos glamurosos para las noches de Verano
+            </p>
+            <div class="home-card fade-in fade-in fade-in">
+              <div class="home-card-image fade-in fade-in fade-in">
+                <img alt="Brazaletes" src="imgSource/brazaletes.jpg" style= "width: 200px; border: 2px solid black;" />
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+    {{>footer}}
+    <script src="/main.js" type="module"></script>
+  </div>
+</body>
+</html>

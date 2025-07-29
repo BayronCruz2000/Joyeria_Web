@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <link href="Less/base.less" rel="stylesheet/less" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&amp;display=swap" rel="stylesheet" />
+
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Minimal Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    {{>header}}
+    <script src="contacto.js"></script>
+    <main class="fade-in">
+      <h1>Contáctanos</h1>
+      <div class="contact-card">
+        <form action="contactos.html" id="formulario" method="get" novalidate>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" required />
+          </div>
+          <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input id="fecha" name="fecha" type="date" required />
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora</label>
+            <input id="hora" name="hora" type="time" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <div class="form-group center">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+        <!--<div class="info-contacto">
+          <p>Para más información llamar al<br />
+            (+504) 2201-1610 o (+504) 2201-7825</p>
+          <p><strong>Dirección:</strong><br />
+            Tegucigalpa, Francisco Morazán, Honduras</p>
+          <p><strong>Redes Sociales:</strong><br />
+            Facebook: Tiendas Francisco</p>
+        </div>-->
+      </div>
+    </main>
+    {{>footer}}
+    <script src="/main.js" type="module"></script>
+  </div>
+</body>
+
+</html>
