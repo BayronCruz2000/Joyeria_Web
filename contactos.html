@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&amp;display=swap" rel="stylesheet" />
+
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Minimal Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="/Joyeria_Web/assets/main-Cg11CM9o.js"></script>
+  <link rel="stylesheet" crossorigin href="/Joyeria_Web/assets/main-D4vfnw1W.css">
+  <link rel="stylesheet" crossorigin href="/Joyeria_Web/assets/style-JEqzptsW.css">
+</head>
+
+<body>
+  <div class="container">
+    
+    <header style="background: rgb(0, 0, 0); padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+      <div style="font-size: 1.5rem; font-weight: bold;">You Studio Jewerly</div>
+      <nav>
+        <ul style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0;">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="preguntas.html">FAQ</a></li>
+          <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <script src="contacto.js"></script>
+    <main class="fade-in">
+      <h1>Contáctanos</h1>
+      <div class="contact-card">
+        <form action="contactos.html" id="formulario" method="get" novalidate>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" required />
+          </div>
+          <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input id="fecha" name="fecha" type="date" required />
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora</label>
+            <input id="hora" name="hora" type="time" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <div class="form-group center">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-section fade-in">
+          <h4>Para mas informacion llamar al</h4>
+          <p>(+504) 3397-0009</p>
+        </div>
+        <div class="footer-section fade-in">
+          <h4>Direccion:</h4>
+          <p>La Ceiba</p>
+        </div>
+        <div class="footer-section fade-in">
+          <h4>Redes Sociales:</h4>
+          <p>Instagram: you.studiojewerly</p>
+        </div>
+    </footer>
+    
+  </div>
+</body>
+
+</html>
