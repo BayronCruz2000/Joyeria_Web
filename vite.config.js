@@ -5,26 +5,24 @@ import htmlPurge from 'vite-plugin-purgecss';
 import handlebars from 'vite-plugin-handlebars';
 import { footer } from './data/common/footer.js';
 
-const obtenerEntradasHTML = ()=>{
-    return Object.fromEntries(
-        [
-            ...glob
-                .sync('./**/*.html', {ignore: ["./dist/**", "./node_modules/**"]}
-
-            ).map (
-                fileData => [
-                    fileData.slice(0, fileData.length - path.extname(fileData).length),
-                    resolve(__dirname, fileData)
-                ]
-            )
+const obtenerEntradasHTML = () => {
+  return Object.fromEntries(
+    [
+      ...glob.sync('./**/*.html', {
+        ignore: ["./dist/**", "./node_modules/**"]
+      }).map(
+        fileData => [
+          fileData.slice(0, fileData.length - path.extname(fileData).length),
+          resolve(__dirname, fileData)
         ]
-    );
-}
-
+      )
+    ]
+  );
+};
 
 export default defineConfig({
   appType: 'mpa',
-  base: process.env.DEPLOY_BASE_URL,
+  base: '/Joyeria_Web/', 
   build: {
     rollupOptions: {
       input: obtenerEntradasHTML()
@@ -33,7 +31,7 @@ export default defineConfig({
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, 'partials'),
-      context: () => footer  // 👈 aquí lo conectas
+      context: () => footer 
     }),
     htmlPurge({})
   ]
